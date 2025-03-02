@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -63,12 +63,17 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
+            <Link href={"#projects"}>
             <Button size="lg" className="rounded-full px-8 font-mono">
               Ver Proyectos
             </Button>
+            </Link>
+            <Link href={"#contact"}>
+            
             <Button size="lg" variant="outline" className="rounded-full px-8 font-mono">
               Contacto
             </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
