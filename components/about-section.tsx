@@ -40,7 +40,7 @@ export function AboutSection() {
           >
             <div className="relative aspect-square overflow-hidden rounded-2xl border-8 border-[#1a1a1a] shadow-xl max-w-md mx-auto">
               <Image
-                src="/foto.png" // Asegúrate de que la ruta de la imagen sea correcta
+                src="/fotoo.png" // Asegúrate de que la ruta de la imagen sea correcta
                 alt="Tu Nombre"
                 width={500}
                 height={500}

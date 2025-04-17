@@ -10,7 +10,8 @@ const projects = [
   {
     id: 1,
     title: "EvenTop - Venta de Tickets",
-    description: "Plataforma para la compra y gestión de tickets para eventos, disponible en web y móvil.",
+    description:
+      "Plataforma para la compra y gestión de tickets para eventos, disponible en web y móvil.",
     image: "/5.png",
     category: "Web y Móvil",
     tags: ["React", "Node.js", "MongoDB"],
@@ -20,7 +21,8 @@ const projects = [
   {
     id: 2,
     title: "Clínica de Masajes",
-    description: "Sitio web y aplicación móvil para la reserva de turnos y gestión de servicios en una clínica de masajes.",
+    description:
+      "Sitio web y aplicación móvil para la reserva de turnos y gestión de servicios en una clínica de masajes.",
     image: "/2.png",
     category: "Web y Móvil",
     tags: ["Next.js", "Typescript", "Tailwind"],
@@ -30,7 +32,8 @@ const projects = [
   {
     id: 3,
     title: "La Marina - Ecommerce",
-    description: "Tienda en línea para la venta de productos de bazar y limpieza, con carrito de compras y gestión de stock.",
+    description:
+      "Tienda en línea para la venta de productos de bazar y limpieza, con carrito de compras y gestión de stock.",
     image: "/3.png",
     category: "Web y Móvil",
     tags: ["React", "Next.js", "Tailwind", "Framer"],
@@ -40,14 +43,38 @@ const projects = [
   {
     id: 4,
     title: "Gestión de Remitos",
-    description: "Aplicación web para la administración y control de remitos en una empresa.",
+    description:
+      "Aplicación web para la administración y control de remitos en una empresa.",
     image: "/4.png",
     category: "Web",
     tags: ["React", "Next.js", "Tailwind", "Shadcn"],
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
     repoUrl: "#",
   },
+  {
+    id: 5,
+    title: "Diseño y Desarrollo Web para Souls Digitals",
+    description:
+      "Desarrollé una página web institucional para Souls Digitals, una agencia de marketing digital, con el objetivo de transmitir profesionalismo, confianza y una identidad visual moderna. ",
+    image: "/souls.jpg",
+    category: "Web",
+    tags: ["React", "Next.js", "Tailwind", "Shadcn"],
+    demoUrl: "https://www.soulsdigitals.blog/",
+    repoUrl: "#",
+  },
+  {
+    id: 6,
+    title: "Desarrollo Web para Aura Asesorías – Estudio Contable",
+    description:
+      "Diseñé y desarrollé el sitio web institucional de Aura Asesorías, un estudio contable orientado a brindar servicios financieros y tributarios personalizados.",
+    image: "/aura.jpg",
+    category: "Web",
+    tags: ["React", "Next.js", "Tailwind", "Shadcn", "Framer Motion"],
+    demoUrl: "https://auracontables.vercel.app/",
+    repoUrl: "#",
+  },
 ];
+
 
 export function ProjectsSection() {
   return (
