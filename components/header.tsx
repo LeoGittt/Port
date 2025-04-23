@@ -8,104 +8,79 @@ import { Button } from "@/components/ui/button"
 
 const navItems = [
   { name: "Inicio", href: "#" },
-  { name: "Sobre Mí", href: "#about" },
+  { name: "Sobre mí", href: "#about" },
   { name: "Habilidades", href: "#skills" },
   { name: "Proyectos", href: "#projects" },
-  
+  { name: "Contacto", href: "#contact" },
 ]
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 bg-[#0a0a0a] right-0 z-50  backdrop-blur-md  ">
-      <nav className="container mx-auto px-4 h-16 flex items-center justify-between" aria-label="Global">
-        {/* Logo */}
-        <Link href="#" className="text-xl text-white font-medium tracking-tight">
-          <span className="sr-only">Leonel</span>
-          Portfolio
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm ">
+      <nav className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+        <Link href="#" className="text-md font-mono text-white tracking-tight hover:text-orange-500 transition-colors">
+          Leonel.dev
         </Link>
 
-        {/* Desktop navigation */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-white text-muted-foreground hover:text-gray-300 transition-colors duration-200"
+              className="text-sm text-neutral-300 hover:text-orange-500 transition-colors font-mono"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-
-          <Button asChild variant="default" size="sm" className="ml-2">
+          {/* <Button variant="ghost" size="sm" className="text-sm text-white hover:text-orange-500 font-mono">
             <Link href="#contact">Contactar</Link>
-          </Button>
+          </Button> */}
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          type="button"
-          className="md:hidden flex items-center justify-center text-muted-foreground"
-          onClick={() => setMobileMenuOpen(true)}
-          aria-expanded={mobileMenuOpen}
-        >
-          <span className="sr-only">Abrir menú</span>
-          <Menu className="h-5 w-5" aria-hidden="true" />
+        {/* Mobile Toggle */}
+        <button onClick={() => setIsOpen(true)} className="md:hidden text-neutral-300">
+          <Menu className="w-5 h-5" />
         </button>
-
-        {/* Mobile menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              className="fixed inset-0 z-50 md:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <motion.div
-                className="fixed inset-y-0 right-0 w-full bg-background/95 backdrop-blur-md px-6 py-4"
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <div className="flex items-center justify-between h-12">
-                  <Link href="#" className="text-xl font-medium tracking-tight">
-                    <span className="sr-only">Leonel</span>
-                    Portfolio
-                  </Link>
-                  <button type="button" className="text-muted-foreground" onClick={() => setMobileMenuOpen(false)}>
-                    <span className="sr-only">Cerrar menú</span>
-                    <X className="h-5 w-5" aria-hidden="true" />
-                  </button>
-                </div>
-
-                <div className="mt-8 flex flex-col gap-6">
-                  {navItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-
-                  <Button asChild className="mt-2 w-full" size="sm">
-                    <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                      Contactar
-                    </Link>
-                  </Button>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-[#0c0c0c] px-6 py-6 flex flex-col border-t-4 border-orange-500"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", stiffness: 120, damping: 20 }}
+          >
+            <div className="flex items-center justify-between mb-6">
+              <Link href="#" className="text-xl font-mono text-white">
+                Leonel.dev
+              </Link>
+              <button onClick={() => setIsOpen(false)} className="text-neutral-300">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-6 mt-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-base font-mono text-neutral-300 hover:text-orange-500 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+             
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
-
