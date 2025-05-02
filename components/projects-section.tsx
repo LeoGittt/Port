@@ -116,7 +116,7 @@ export function ProjectsSection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section id="projects" className="py-24 bg-[#0a0a0a]">
+    <section id="projects" className="py-24 bg-black">
       <div className="container px-4 md:px-6 mx-auto">
         {/* Título de la sección */}
         <div className="max-w-2xl mx-auto text-center mb-16">
@@ -127,7 +127,7 @@ export function ProjectsSection() {
             Mis <span className="text-orange-500">Proyectos</span>
           </h2>
           <div className="w-20 h-1 bg-orange-500/30 mx-auto mb-5"></div>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-xl font-mono mx-auto">
             Explora algunos de mis trabajos más recientes. Cada proyecto
             representa un desafío único que he abordado con creatividad y
             habilidades técnicas.

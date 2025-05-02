@@ -103,7 +103,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-32 bg-gradient-to-b from-[#0a0a0a] to-[#121212] relative overflow-hidden"
+      className="py-32 bg-black relative overflow-hidden"
     >
       {/* Elementos decorativos de fondo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
