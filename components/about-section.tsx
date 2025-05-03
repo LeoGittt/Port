@@ -25,7 +25,7 @@ const socialLinks = [
   },
 ]
 
-const frontendSkills = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "JavaScript"]
+const frontendSkills = ["React", "Next.js", "TypeScript", "Python", "Framer Motion", "JavaScript"]
 
 const stats = [
   { value: "2+", label: "Años de Experiencia" },
@@ -42,15 +42,12 @@ export function AboutSection() {
   return (
     <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black">
       <div className="container max-w-[1100px] px-4 md:px-6 mx-auto">
-        {/* Section Header */}
         <div className="flex flex-col items-center space-y-1 mb-8 sm:mb-12 md:mb-16 text-center">
           <span className="text-xs uppercase tracking-widest text-orange-500/80">Perfil</span>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-white">Sobre Mí</h2>
         </div>
 
-        {/* Content Grid - Responsive layout */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 lg:gap-12 items-start">
-          {/* Image Container */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,23 +55,15 @@ export function AboutSection() {
             transition={{ duration: 0.4 }}
             className="md:col-span-2"
           >
-            {/* Enhanced photo presentation with rounded corners */}
             <div
               className="aspect-[4/5] sm:aspect-square md:aspect-[4/5] w-full max-w-[300px] sm:max-w-[350px] mx-auto md:max-w-none overflow-hidden relative group cursor-pointer rounded-2xl"
               onMouseEnter={() => setImageHovered(true)}
               onMouseLeave={() => setImageHovered(false)}
             >
-              {/* Subtle orange accent */}
               <div className="absolute inset-0 bg-gradient-to-t from-orange-500/10 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
-
-              {/* Photo frame with subtle border */}
               <div className="absolute inset-0 border border-neutral-800 group-hover:border-orange-500/20 transition-colors duration-500 z-20 rounded-2xl"></div>
-
-              {/* Corner accent - adjusted for rounded corners */}
               <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-orange-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 rounded-tr-2xl"></div>
               <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-orange-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 rounded-bl-2xl"></div>
-
-              {/* Image with zoom effect */}
               <div className="absolute inset-0 bg-[#111] rounded-2xl">
                 <Image
                   src="/fotoo.png"
@@ -89,7 +78,6 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="flex gap-3 mt-4 justify-center md:justify-start">
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -114,7 +102,6 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +133,30 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Frontend Skills */}
+            {/* Formación */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
+              <div className="flex items-center gap-2 mb-3 mt-4">
+                <Layers className="h-4 w-4 text-orange-500" />
+                <span className="text-xs uppercase tracking-widest text-orange-500">Formación</span>
+              </div>
+              <div className="space-y-3 text-neutral-300 text-sm leading-relaxed">
+                <div className="border border-neutral-800 bg-[#111] rounded-lg p-3">
+                  <p className="font-medium text-white">Frontend Developer</p>
+                  <p className="text-xs text-neutral-400">Soy Henry - Bootcamp</p>
+                </div>
+                <div className="border border-neutral-800 bg-[#111] rounded-lg p-3">
+                  <p className="font-medium text-white">Tecnicatura Universitaria en Programación</p>
+                  <p className="text-xs text-neutral-400">Universidad Tecnológica Nacional (UTN) - En curso</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Skills */}
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Layers className="h-4 w-4 text-orange-500" />
@@ -171,7 +181,7 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Stats Cards */}
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {stats.map((stat, index) => (
                 <Card key={index} className="bg-[#111] border-0 overflow-hidden relative group rounded-xl">
@@ -185,7 +195,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            {/* Download Button */}
+            {/* Download CV */}
             <div className="flex items-center gap-3 sm:gap-4 pt-2">
               <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }} className="w-full sm:w-auto">
                 <Button
@@ -200,7 +210,6 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Subtle decorative element */}
         <div className="flex justify-center mt-12 sm:mt-16 md:mt-20">
           <div className="flex items-center gap-2">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-orange-500/30"></div>

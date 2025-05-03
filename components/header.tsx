@@ -20,7 +20,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm ">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-        <Link href="#" className="text-md font-mono text-white tracking-tight hover:text-orange-500 transition-colors">
+        <Link href="#" className="text-md  text-white tracking-tight hover:text-orange-500 transition-colors">
           Leonel.dev
         </Link>
 
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm text-neutral-300 hover:text-orange-500 transition-colors font-mono"
+              className="text-sm text-neutral-400 hover:text-orange-500 transition-colors"
             >
               {item.name}
             </Link>
@@ -71,7 +71,7 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-base font-mono text-neutral-300 hover:text-orange-500 transition-colors"
+                  className="text-base  text-neutral-400 hover:text-orange-500 transition-colors"
                 >
                   {item.name}
                 </Link>
