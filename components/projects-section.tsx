@@ -1,16 +1,17 @@
-"use client"
+"use client";
 
-import { useRef, useState } from "react"
-import { motion, useInView } from "framer-motion"
-import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
     id: 1,
     title: "EvenTop - Venta de Tickets",
-    description: "Plataforma para la compra y gestión de tickets para eventos, disponible en web y móvil.",
+    description:
+      "Plataforma para la compra y gestión de tickets para eventos, disponible en web y móvil.",
     image: "/eventop.jpg",
     tags: ["React", "Node.js", "MongoDB"],
     demoUrl: "https://eventop-frontend.vercel.app/",
@@ -36,7 +37,8 @@ const projects = [
   {
     id: 4,
     title: "Gestión de Remitos",
-    description: "Aplicación web para la administración y control de remitos en una empresa.",
+    description:
+      "Aplicación web para la administración y control de remitos en una empresa.",
     image: "/4.png",
     tags: ["React", "Next.js", "Tailwind", "Shadcn"],
     demoUrl: "https://v0-colorshop-remitos-jdu4ku.vercel.app/",
@@ -65,7 +67,14 @@ const projects = [
     description:
       "Diseñé y desarrollé la presencia digital de Boostly, una agencia especializada en soluciones de marketing y desarrollo web, utilizando tecnologías modernas como Next.js y TypeScript.",
     image: "/booostly.jpg",
-    tags: ["Next.js", "TypeScript", "Lucide-react", "Framer Motion", "Shadcn", "Hooks"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
     demoUrl: "https://boostly-t749.vercel.app/",
   },
   {
@@ -74,7 +83,14 @@ const projects = [
     description:
       "Diseñé y desarrollé el sitio web institucional de BYAS, una empresa de ingeniería enfocada en brindar soluciones técnicas integrales, utilizando un stack moderno basado en Next.js y TypeScript.",
     image: "/byass.jpg",
-    tags: ["Next.js", "TypeScript", "Lucide-react", "Framer Motion", "Shadcn", "Hooks"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
     demoUrl: "https://byas.vercel.app/",
   },
   {
@@ -83,15 +99,52 @@ const projects = [
     description:
       "Diseñé y desarrollé la plataforma web de Mueblito, una tienda de muebles enfocada en ofrecer productos funcionales y estéticos, con una interfaz moderna y responsiva construida con Next.js y TypeScript.",
     image: "/mueblito.jpg",
-    tags: ["Next.js", "TypeScript", "Lucide-react", "Framer Motion", "Shadcn", "Hooks"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
     demoUrl: "https://art-ydeisgn.vercel.app/",
   },
-]
+  {
+    id: 10,
+    title: "S I M U Sistema Integral ",
+    description: "Sistema Integral Municipal Unificado",
+    image: "/6.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://reclamos-frontend.vercel.app/",
+  },
+  {
+    id: 11,
+    title: "Cuatro A Estudio Contable",
+    description: "Sitio web sobre un estudio contable.",
+    image: "/7.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://cuatro-aestudio.vercel.app/",
+  },
+];
 
 export function ProjectsSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
     <section id="projects" className="py-24 bg-black">
@@ -118,12 +171,16 @@ export function ProjectsSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-zinc-400 text-lg max-w-xl mx-auto"
           >
-            Una selección de mis trabajos más recientes en desarrollo web y diseño de interfaces.
+            Una selección de mis trabajos más recientes en desarrollo web y
+            diseño de interfaces.
           </motion.p>
         </div>
 
         {/* Vercel-inspired projects grid */}
-        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          ref={sectionRef}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -134,7 +191,12 @@ export function ProjectsSection() {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
                 <div className="relative h-full overflow-hidden rounded-lg bg-zinc-900 border border-zinc-800 transition-all duration-300 hover:border-zinc-700 hover:shadow-[0_0_30px_rgba(0,0,0,0.2)]">
                   {/* Project image with gradient overlay */}
                   <div className="relative aspect-[16/9] overflow-hidden">
@@ -161,14 +223,18 @@ export function ProjectsSection() {
                       {project.title}
                     </h3>
 
-                    <p className="text-zinc-400 text-sm line-clamp-2 mb-4">{project.description}</p>
+                    <p className="text-zinc-400 text-sm line-clamp-2 mb-4">
+                      {project.description}
+                    </p>
 
                     {/* Vercel-inspired tech tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span key={tagIndex} className="text-xs text-zinc-500">
                           {tag}
-                          {tagIndex < Math.min(2, project.tags.length - 1) ? " • " : ""}
+                          {tagIndex < Math.min(2, project.tags.length - 1)
+                            ? " • "
+                            : ""}
                         </span>
                       ))}
                     </div>
@@ -179,7 +245,9 @@ export function ProjectsSection() {
                       <ArrowUpRight
                         className={cn(
                           "ml-1 h-3.5 w-3.5 transition-transform duration-300",
-                          hoveredProject === project.id ? "translate-x-0.5 -translate-y-0.5" : "",
+                          hoveredProject === project.id
+                            ? "translate-x-0.5 -translate-y-0.5"
+                            : ""
                         )}
                       />
                     </div>
@@ -189,7 +257,9 @@ export function ProjectsSection() {
                   <div
                     className={cn(
                       "absolute inset-0 border border-orange-500/0 rounded-lg transition-opacity duration-300",
-                      hoveredProject === project.id ? "opacity-100 border-orange-500/50" : "opacity-0",
+                      hoveredProject === project.id
+                        ? "opacity-100 border-orange-500/50"
+                        : "opacity-0"
                     )}
                   />
                 </div>
@@ -199,5 +269,5 @@ export function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
