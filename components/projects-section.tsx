@@ -139,6 +139,21 @@ const projects = [
     ],
     demoUrl: "https://cuatro-aestudio.vercel.app/",
   },
+  {
+    id: 12,
+    title: "Auto Web San Juan",
+    description: "AutoWeb San Juan · Concesionario",
+    image: "/12.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
+  },
 ];
 
 export function ProjectsSection() {
