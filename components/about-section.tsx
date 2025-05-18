@@ -36,7 +36,7 @@ export function AboutSection() {
   const [imageHovered, setImageHovered] = useState(false)
 
   const handleDownloadCV = () => {
-    window.open("/cv.pdf", "_blank")
+    window.open("/cvv.pdf", "_blank")
   }
 
   return (
