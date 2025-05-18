@@ -1,11 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Download, Github, Linkedin, Instagram, ExternalLink, Code, Layers, Star } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Download,
+  Github,
+  Linkedin,
+  Instagram,
+  ExternalLink,
+  Code,
+  Layers,
+  Star,
+  LibraryBig,
+} from "lucide-react";
 
 const socialLinks = [
   {
@@ -23,29 +33,45 @@ const socialLinks = [
     icon: <Instagram className="h-4 w-4" />,
     label: "Instagram",
   },
-]
+];
 
-const frontendSkills = ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "JavaScript"]
+const frontendSkills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "Framer Motion",
+  "JavaScript",
+];
+
+const estudios = [
+  "Bootcamp Soy Henry",
+  "Estudiante universitario en programacion UTN - en curso",
+];
 
 const stats = [
   { value: "2+", label: "Años de Experiencia" },
   { value: "5+", label: "Proyectos Completados" },
-]
+];
 
 export function AboutSection() {
-  const [imageHovered, setImageHovered] = useState(false)
+  const [imageHovered, setImageHovered] = useState(false);
 
   const handleDownloadCV = () => {
-    window.open("/cvv.pdf", "_blank")
-  }
+    window.open("/cvv.pdf", "_blank");
+  };
 
   return (
     <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-28 bg-black">
       <div className="container max-w-[1100px] px-4 md:px-6 mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center space-y-1 mb-8 sm:mb-12 md:mb-16 text-center">
-          <span className="text-xs uppercase tracking-widest text-orange-500/80">Perfil</span>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-white">Sobre Mí</h2>
+          <span className="text-xs uppercase tracking-widest text-orange-500/80">
+            Perfil
+          </span>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-white">
+            Sobre Mí
+          </h2>
         </div>
 
         {/* Content Grid - Responsive layout */}
@@ -120,40 +146,69 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="space-y-4 sm:space-y-6 md:space-y-8 md:col-span-3"
+            className="space-y-2 sm:space-y-6 md:space-y-8 md:col-span-3"
           >
             <div className="text-center md:text-left">
               <div className="inline-flex items-center gap-2 mb-2">
                 <Code className="h-4 w-4 text-orange-500" />
-                <span className="text-xs uppercase tracking-widest text-orange-500">Frontend Developer</span>
+                <span className="text-xs uppercase tracking-widest text-orange-500">
+                  Frontend Developer
+                </span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-medium text-white">Leonel González</h3>
+              <h3 className="text-xl sm:text-2xl font-medium text-white">
+                Leonel González
+              </h3>
               <p className="text-sm text-neutral-400 mt-1">
                 Especializado en crear experiencias web modernas e interactivas
               </p>
             </div>
 
-            <div className="space-y-4 text-neutral-300 text-sm leading-relaxed">
+            <div className="space-y-2 text-neutral-300 text-sm leading-relaxed">
               <p>
-                Desarrollador frontend con experiencia en la creación de interfaces de usuario atractivas, responsivas y
-                de alto rendimiento. Especializado en React, Next.js y TypeScript, con un enfoque en crear experiencias
-                de usuario excepcionales.
+                Soy estudiante de programación y desarrollador frontend
+                apasionado por crear interfaces modernas, responsivas y fáciles
+                de usar.
               </p>
               <p>
-                Mi objetivo es construir aplicaciones web que no solo se vean bien, sino que también ofrezcan una
-                experiencia de usuario fluida y accesible. Comprometido con escribir código limpio, mantenible y
-                optimizado para el rendimiento.
+                Me gusta construir experiencias web que se vean bien y funcionen
+                mejor, escribiendo código limpio y bien estructurado.
               </p>
             </div>
 
-            {/* Frontend Skills */}
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Layers className="h-4 w-4 text-orange-500" />
-                <span className="text-xs uppercase tracking-widest text-orange-500">Tecnologías principales</span>
+                <span className="text-xs uppercase tracking-widest text-orange-500">
+                  Tecnologías principales
+                </span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {frontendSkills.map((skill, index) => (
+                  <motion.span
+                    key={index}
+                    whileHover={{
+                      y: -3,
+                      backgroundColor: "rgba(249, 115, 22, 0.1)",
+                      borderColor: "rgba(249, 115, 22, 0.3)",
+                      color: "#fff",
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="px-2 sm:px-3 py-1 sm:py-1.5 bg-[#111] border border-neutral-800 rounded-md text-xs font-medium text-neutral-300 transition-all duration-300"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <LibraryBig className="h-4 w-4 text-orange-500" />
+                <span className="text-xs uppercase tracking-widest text-orange-500">
+                  Estudios
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {estudios.map((skill, index) => (
                   <motion.span
                     key={index}
                     whileHover={{
@@ -174,12 +229,17 @@ export function AboutSection() {
             {/* Stats Cards */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {stats.map((stat, index) => (
-                <Card key={index} className="bg-[#111] border-0 overflow-hidden relative group rounded-xl">
+                <Card
+                  key={index}
+                  className="bg-[#111] border-0 overflow-hidden relative group rounded-xl"
+                >
                   <CardContent className="p-3 sm:p-4 relative z-10">
                     <p className="text-lg sm:text-xl md:text-2xl font-medium text-white group-hover:text-orange-500/90 transition-colors duration-300">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-neutral-400 mt-1">{stat.label}</p>
+                    <p className="text-xs text-neutral-400 mt-1">
+                      {stat.label}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -187,7 +247,11 @@ export function AboutSection() {
 
             {/* Download Button */}
             <div className="flex items-center gap-3 sm:gap-4 pt-2">
-              <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }} className="w-full sm:w-auto">
+              <motion.div
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+                className="w-full sm:w-auto"
+              >
                 <Button
                   onClick={handleDownloadCV}
                   className="rounded-md h-9 px-4 bg-orange-500 text-white text-xs font-medium transition-all duration-300 hover:bg-orange-600 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] w-full sm:w-auto"
@@ -210,5 +274,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

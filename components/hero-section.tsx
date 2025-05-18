@@ -104,17 +104,14 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="text-sm sm:text-md text-neutral-300 max-w-[650px] mx-auto leading-relaxed font-mono"
           >
-            Soy un frontend que disfruta dar vida a las ideas, cuidando cada
-            detalle para que la experiencia del usuario sea fluida, atractiva y
-            moderna. Me encanta trabajar con{" "}
+            Frontend apasionado por crear experiencias atractivas con{" "}
             <span className="bg-gradient-to-r from-orange-300 to-orange-200 bg-clip-text text-transparent">
               React
             </span>{" "}
             y{" "}
             <span className="bg-gradient-to-r from-orange-300 to-orange-200 bg-clip-text text-transparent">
               Next.js
-            </span>{" "}
-            para lograrlo.
+            </span>.
           </motion.p>
 
           {/* Buttons - Vercel style */}

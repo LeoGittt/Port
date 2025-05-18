@@ -87,16 +87,10 @@ export function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-16"
         >
-          <span className="inline-block mb-4 text-sm font-medium text-primary text-orange-400 tracking-wider">
-            TRABAJO RECIENTE
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
-            Proyectos{" "}
-            <span className="text-primary text-orange-500">
-              Destacados
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-orange-500 mb-6">
+            Mis Proyectos{" "}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
+          <p className="text-md text-gray-50 dark:text-gray-300 max-w-2xl">
             Una selección de mis trabajos más recientes. Cada proyecto
             representa un desafío único resuelto con soluciones creativas y
             técnicas.
@@ -172,21 +166,6 @@ export function ProjectsSection() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <Button
-            variant="outline"
-            className="px-8 py-6 rounded-full border-primary dark:border-orange-400 text-primary dark:text-orange-400 hover:bg-primary/10 dark:hover:bg-orange-400/10"
-          >
-            Ver todos los proyectos
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
