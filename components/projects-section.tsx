@@ -169,6 +169,21 @@ const projects = [
     ],
     demoUrl: "https://isr-ebon.vercel.app/",
   },
+  {
+    id: 13,
+    title: "Servisplit",
+    description: "servicios de instalacion de aire acondicionados",
+    image: "/ser.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://servisplit.vercel.app/",
+  },
 ];
 
 export function ProjectsSection() {
