@@ -158,7 +158,7 @@ const projects = [
     id: 13,
     title: "ISR Performance Mendoza",
     description: "servicios especializados para maximizar el rendimiento y personalización de tu vehículo",
-    image: "/77.jpg",
+    image: "/777.jpg",
     tags: [
       "Next.js",
       "TypeScript",
@@ -167,7 +167,7 @@ const projects = [
       "Shadcn",
       "Hooks",
     ],
-    demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
+    demoUrl: "https://isr-ebon.vercel.app/",
   },
 ];
 
