@@ -158,7 +158,7 @@ const projects = [
     id: 13,
     title: "ISR Performance Mendoza",
     description: "servicios especializados para maximizar el rendimiento y personalización de tu vehículo",
-    image: "/777.jpg",
+    image: "/capturaaa.jpg",
     tags: [
       "Next.js",
       "TypeScript",
