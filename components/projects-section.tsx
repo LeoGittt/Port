@@ -75,7 +75,7 @@ const projects = [
       "Shadcn",
       "Hooks",
     ],
-    demoUrl: "https://boostly-t749.vercel.app/",
+    demoUrl: "https://www.boostlyagency.online/",
   },
   {
     id: 8,
@@ -138,6 +138,36 @@ const projects = [
       "Hooks",
     ],
     demoUrl: "https://cuatro-aestudio.vercel.app/",
+  },
+  {
+    id: 12,
+    title: "Auto Web San Juan",
+    description: "Tienda de autos Nuevos y Usados",
+    image: "/77.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
+  },
+  {
+    id: 13,
+    title: "ISR Performance Mendoza",
+    description: "servicios especializados para maximizar el rendimiento y personalización de tu vehículo",
+    image: "/77.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Lucide-react",
+      "Framer Motion",
+      "Shadcn",
+      "Hooks",
+    ],
+    demoUrl: "https://auto-web-sanjuan-sypk.vercel.app/",
   },
 ];
 
