@@ -21,7 +21,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm ">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="#" className="text-md  text-white tracking-tight hover:text-orange-500 transition-colors">
-          Leonel.dev
+          Leonel
         </Link>
 
         {/* Desktop Menu */}
