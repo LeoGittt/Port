@@ -158,7 +158,7 @@ const projects = [
     id: 13,
     title: "ISR Performance Mendoza",
     description: "servicios especializados para maximizar el rendimiento y personalización de tu vehículo",
-    image: "/capturaaa.jpg",
+    image: "/Capturaaa.jpg",
     tags: [
       "Next.js",
       "TypeScript",
@@ -170,7 +170,7 @@ const projects = [
     demoUrl: "https://isr-ebon.vercel.app/",
   },
   {
-    id: 13,
+    id: 14,
     title: "Servisplit",
     description: "servicios de instalacion de aire acondicionados",
     image: "/ser.jpg",
